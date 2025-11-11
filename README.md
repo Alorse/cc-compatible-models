@@ -10,10 +10,9 @@ A comprehensive reference guide for developers looking to use Claude Code with c
 | Anthropic | Sonnet 4.5 | $3.00 | $15.00 | Official API pricing. |
 | Alibaba | Qwen3 Coder | $0.22 | $0.95 | Uses Anthropic-compatible endpoint. |
 | DeepSeek | deepseek-chat | $0.28 | $0.42 | Context caching enabled by default. |
-| MiniMax | MiniMax-M2 | $0.30 | $1.20 | No prompt caching feature available. |
+| MiniMax | MiniMax-M2 | $0.30 | $1.20 | Has **Coding Plan** from $10/mo. |
 | Moonshot AI | Kimi K2 | $0.14 | $2.49 | Automatic prompt caching (beta). |
 | Zhipu (ZAI) | GLM 4.6 | $0.60 | $2.20 | Has **GLM Coding Plan** from $3/mo. |
-| Cerebras | Qwen3 Coder | $2.00 | $2.00 | **Cerebras Code** plans: $50-200/mo. |
 
 ---
 
@@ -287,6 +286,28 @@ Several providers offer **subscription-based coding plans** that provide generou
 **Performance:**
 - 2,000 tokens/second on Cerebras Wafer Scale Engine
 - Problems that take 20s on Sonnet 4 finish in 1s
+
+**Learn More:** https://www.cerebras.ai/blog/qwen3-coder-480b-is-live-on-cerebras
+
+---
+
+### **Qwen3 Coder - Cerebras Code** (Third-party for Qwen3 Coder)
+
+**Plans:**
+- **Cerebras Code Pro**: $50/mo
+- **Cerebras Code Max**: $200/mo
+
+**Benefits:**
+- **20x faster coding** than competitors
+- Equal or higher rate limits than Cursor/Anthropic
+- Powered by Qwen3 Coder 480B (MoE architecture)
+- Access via Cerebras Inference Cloud, OpenRouter, or HuggingFace
+
+**Performance:**
+- 2,000 tokens/second on Cerebras Wafer Scale Engine
+- Problems that take 20s on Sonnet 4 finish in 1s
+
+**Important:** This is a **third-party service** (Cerebras) offering Qwen3 Coder with subscription plans. The model itself is from Alibaba. For direct access to Qwen3 Coder without subscription limits, use the Alibaba endpoint shown in the setup guide above.
 
 **Learn More:** https://www.cerebras.ai/blog/qwen3-coder-480b-is-live-on-cerebras
 
