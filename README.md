@@ -12,7 +12,8 @@ A comprehensive reference guide for developers looking to use Claude Code with c
 | DeepSeek | deepseek-chat | $0.28 | $0.42 | Context caching enabled by default. |
 | MiniMax | MiniMax-M2 | $0.30 | $1.20 | No prompt caching feature available. |
 | Moonshot AI | Kimi K2 | $0.14 | $2.49 | Automatic prompt caching (beta). |
-| Zhipu (ZAI) | GLM 4.6 | $0.60 | $2.20 | Subscription plan starts "from $3/mo." |
+| Zhipu (ZAI) | GLM 4.6 | $0.60 | $2.20 | Has **GLM Coding Plan** from $3/mo. |
+| Cerebras | Qwen3 Coder | $2.00 | $2.00 | **Cerebras Code** plans: $50-200/mo. |
 
 ---
 
@@ -222,6 +223,72 @@ claude
 ```
 
 **Documentation:** [https://docs.z.ai/scenario-example/develop-tools/claude](https://docs.z.ai/scenario-example/develop-tools/claude)
+
+---
+
+## 💰 Coding Plans Overview
+
+Several providers offer **subscription-based coding plans** that provide generous limits for development work, often at 3-10x better value than pay-per-token pricing. These are perfect for intensive coding sessions or professional development work.
+
+### **MiniMax M2 - Coding Plan** ⭐
+
+**Plans:**
+- **Starter**: $10/mo (100 prompts/5h) | $100/yr
+- **Plus**: $20/mo (300 prompts/5h) | $200/yr
+- **Max**: $50/mo (1000 prompts/5h) | $500/yr
+
+**Benefits:**
+- 1 prompt ≈ 15 model requests
+- **1/10th the cost** of comparable plans (Claude, etc.)
+- No unpredictable bills - fixed subscription
+- Powered by MiniMax-M2 (230B MoE, 10B active)
+- 204K context window
+
+**Subscribe:** https://platform.minimax.io/subscribe/coding-plan
+
+---
+
+### **GLM 4.6 - GLM Coding Plan** ⭐
+
+**Plans:**
+- **Lite**: $3/mo (~120 prompts/5h)
+- **Pro**: $15/mo (~600 prompts/5h)
+- **Max**: Price varies (~2400 prompts/5h)
+
+**Benefits:**
+- **3x more usage** than comparable plans
+- 1 prompt = ~15-20 model calls
+- Over **55 tokens/second** generation speed
+- No network restrictions or account bans
+- Vision & Web Search (Pro+)
+- Compatible with Claude Code, Cline, Cursor, etc.
+
+**Features:**
+- Text generation, Vision, Video generation
+- Model mapping: Opus/Sonnet/Haiku all default to GLM models
+- Singapore-based services with privacy protection
+
+**Subscribe:** https://z.ai/subscribe
+
+---
+
+### **Qwen3 Coder - Cerebras Code** (Third-party)
+
+**Plans:**
+- **Cerebras Code Pro**: $50/mo
+- **Cerebras Code Max**: $200/mo
+
+**Benefits:**
+- **20x faster coding** than competitors
+- Equal or higher rate limits than Cursor/Anthropic
+- Powered by Qwen3 Coder 480B (MoE architecture)
+- Access via Cerebras Inference Cloud, OpenRouter, or HuggingFace
+
+**Performance:**
+- 2,000 tokens/second on Cerebras Wafer Scale Engine
+- Problems that take 20s on Sonnet 4 finish in 1s
+
+**Learn More:** https://www.cerebras.ai/blog/qwen3-coder-480b-is-live-on-cerebras
 
 ---
 
