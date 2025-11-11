@@ -271,48 +271,6 @@ Several providers offer **subscription-based coding plans** that provide generou
 
 ---
 
-### **Qwen3 Coder - Cerebras Code** (Third-party)
-
-**Plans:**
-- **Cerebras Code Pro**: $50/mo
-- **Cerebras Code Max**: $200/mo
-
-**Benefits:**
-- **20x faster coding** than competitors
-- Equal or higher rate limits than Cursor/Anthropic
-- Powered by Qwen3 Coder 480B (MoE architecture)
-- Access via Cerebras Inference Cloud, OpenRouter, or HuggingFace
-
-**Performance:**
-- 2,000 tokens/second on Cerebras Wafer Scale Engine
-- Problems that take 20s on Sonnet 4 finish in 1s
-
-**Learn More:** https://www.cerebras.ai/blog/qwen3-coder-480b-is-live-on-cerebras
-
----
-
-### **Qwen3 Coder - Cerebras Code** (Third-party for Qwen3 Coder)
-
-**Plans:**
-- **Cerebras Code Pro**: $50/mo
-- **Cerebras Code Max**: $200/mo
-
-**Benefits:**
-- **20x faster coding** than competitors
-- Equal or higher rate limits than Cursor/Anthropic
-- Powered by Qwen3 Coder 480B (MoE architecture)
-- Access via Cerebras Inference Cloud, OpenRouter, or HuggingFace
-
-**Performance:**
-- 2,000 tokens/second on Cerebras Wafer Scale Engine
-- Problems that take 20s on Sonnet 4 finish in 1s
-
-**Important:** This is a **third-party service** (Cerebras) offering Qwen3 Coder with subscription plans. The model itself is from Alibaba. For direct access to Qwen3 Coder without subscription limits, use the Alibaba endpoint shown in the setup guide above.
-
-**Learn More:** https://www.cerebras.ai/blog/qwen3-coder-480b-is-live-on-cerebras
-
----
-
 ## General Tips
 
 1. **Version Check**: Ensure Claude Code is up to date with `claude --version` and update with `claude update`
