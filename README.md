@@ -1,4 +1,4 @@
-# Claude Code: Compatible Models & Providers (2025-2026 Edition)
+# Claude Code: Compatible Models & Providers
 
 A comprehensive reference guide for developers using **Claude Code** with official and alternative AI providers. This guide covers the latest flagship models, pricing (Input/Output per 1M tokens), configuration for Anthropic, Alibaba Qwen, DeepSeek, MiniMax, Moonshot AI (Kimi), Zhipu GLM, Xiaomi MiMo, StepFun, and multi-provider gateways.
 
