@@ -2,24 +2,21 @@
 
 A comprehensive reference guide for developers using **Claude Code** with official and alternative AI providers. This guide covers the latest flagship models, pricing (Input/Output per 1M tokens), configuration for Anthropic, Alibaba Qwen, DeepSeek, MiniMax, Moonshot AI (Kimi), Zhipu GLM, Xiaomi MiMo, StepFun, and multi-provider gateways.
 
-## Model Pricing Overview (Latest Models)
+## Compatible Providers
 
-| Provider | Flagship Model | Input ($/1M) | Output ($/1M) | Context | Notes |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **Anthropic** | Claude Opus 4.7 | $5.00 | $25.00 | 200K | Most capable; agentic coding & reasoning. |
-| **Anthropic** | Claude Sonnet 4.6 | $3.00 | $15.00 | 200K | Best price/performance for coding tasks. |
-| **Alibaba** | Qwen 3.6-Plus | $0.28 | $1.65 | 1M | Agentic coding, deep reasoning, 1M context. |
-| **DeepSeek** | DeepSeek V3.2 | $0.27 | $1.10 | 128K | Extremely efficient, caching enabled. |
-| **DeepSeek** | DeepSeek-R2 | $0.55 | $2.19 | 128K | Reasoning model, strong benchmarks. |
-| **MiniMax** | MiniMax-M2.7 | $0.30 | $1.20 | 205K | Open-source MoE, SWE-Pro 56.22%. |
-| **Moonshot** | Kimi K2.5 | $0.60 | $3.00 | 262K | 1T params MoE, native multimodal. |
-| **Moonshot** | Kimi K2.6 | TBD | TBD | 262K | Beta; coding-agent-first model. |
-| **Zhipu (Z.ai)** | GLM-5.1 | $0.95 | $3.15 | 203K | 8+ hr autonomous tasks, MIT license. |
-| **Xiaomi** | MiMo-V2-Pro | $1.00 | $3.00 | 1M | Top-5 global on OpenRouter Arena. |
-| **StepFun** | Step-3.5-Flash | $0.10 | $0.30 | 256K | Best value reasoning model. |
-| **OpenRouter** | Multi-Provider | Varies | Varies | Varies | Unified access to all the above. |
-| **SiliconFlow** | Multi-Provider | Varies | Varies | Varies | Hosted models, Anthropic-compatible. |
-| **Ollama** | Local/Cloud | Free | Free | 32K+ | Local models or cloud via ollama.com. |
+| Provider | Type | Notable Models | Coding Plan |
+| :--- | :--- | :--- | :--- |
+| **Anthropic** | Official | Claude Opus 4.7, Sonnet 4.6 | Max subscription |
+| **Alibaba (DashScope)** | Direct | Qwen 3.6-Plus, Qwen 3.5-Coder | — |
+| **DeepSeek** | Direct | DeepSeek V3.2, DeepSeek-R2 | — |
+| **MiniMax** | Direct | MiniMax-M2.7, M2.7-Highspeed | Token Plan (from $10/mo) |
+| **Moonshot (Kimi)** | Direct | Kimi K2.5, K2.6 (beta) | — |
+| **Zhipu (Z.ai)** | Direct | GLM-5.1, GLM-5, GLM-4.7 | Coding Plan (from $10/mo) |
+| **Xiaomi (MiMo)** | Direct | MiMo-V2-Pro, V2-Omni, V2-Flash | Token Plan (from ~$6/mo) |
+| **StepFun** | Direct | Step-3.5-Flash, Step-3 | Step Plan (from $6.99/mo) |
+| **SiliconFlow** | Gateway | Hosted DeepSeek, GLM, Qwen, Kimi | — |
+| **OpenRouter** | Gateway | 200+ models from all providers | — |
+| **Ollama** | Local / Cloud | Open-source models, free | Free (local) |
 
 ---
 
