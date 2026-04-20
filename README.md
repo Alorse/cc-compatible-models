@@ -50,8 +50,7 @@ Edit `~/.claude/settings.json`:
   "env": {
     "ANTHROPIC_BASE_URL": "https://dashscope-intl.aliyuncs.com/apps/anthropic",
     "ANTHROPIC_AUTH_TOKEN": "YOUR_DASHSCOPE_API_KEY",
-    "ANTHROPIC_MODEL": "qwen3.6-plus",
-    "ANTHROPIC_SMALL_FAST_MODEL": "qwen3.5-coder"
+    "ANTHROPIC_MODEL": "qwen3.6-plus"
   }
 }
 ```
@@ -74,8 +73,7 @@ DeepSeek V3.2 and R2 offer incredibly cost-effective coding and reasoning.
   "env": {
     "ANTHROPIC_BASE_URL": "https://api.deepseek.com/anthropic",
     "ANTHROPIC_AUTH_TOKEN": "YOUR_DEEPSEEK_API_KEY",
-    "ANTHROPIC_MODEL": "deepseek-reasoner",
-    "ANTHROPIC_SMALL_FAST_MODEL": "deepseek-chat"
+    "ANTHROPIC_MODEL": "deepseek-reasoner"
   }
 }
 ```
@@ -100,8 +98,7 @@ MiniMax-M2.7 (March 2026) is open-source, 230B params MoE, with SOTA on real-wor
   "env": {
     "ANTHROPIC_BASE_URL": "https://api.minimax.io/anthropic",
     "ANTHROPIC_AUTH_TOKEN": "YOUR_MINIMAX_API_KEY",
-    "ANTHROPIC_MODEL": "minimax-m2.7",
-    "ANTHROPIC_SMALL_FAST_MODEL": "minimax-m2.7-highspeed"
+    "ANTHROPIC_MODEL": "minimax-m2.7"
   }
 }
 ```
@@ -126,8 +123,7 @@ Kimi K2.5 is a 1T-parameter MoE model optimized for long context. K2.6 is in bet
   "env": {
     "ANTHROPIC_BASE_URL": "https://api.moonshot.ai/anthropic",
     "ANTHROPIC_AUTH_TOKEN": "YOUR_MOONSHOT_API_KEY",
-    "ANTHROPIC_MODEL": "kimi-k2.5",
-    "ANTHROPIC_SMALL_FAST_MODEL": "kimi-k2"
+    "ANTHROPIC_MODEL": "kimi-k2.5"
   }
 }
 ```
@@ -146,8 +142,7 @@ GLM-5.1 (April 2026) is a 744B MoE model capable of 8+ hour autonomous tasks, MI
   "env": {
     "ANTHROPIC_BASE_URL": "https://api.z.ai/api/anthropic",
     "ANTHROPIC_AUTH_TOKEN": "YOUR_ZAI_API_KEY",
-    "ANTHROPIC_MODEL": "glm-5.1",
-    "ANTHROPIC_SMALL_FAST_MODEL": "glm-4-flash"
+    "ANTHROPIC_MODEL": "glm-5.1"
   }
 }
 ```
@@ -173,8 +168,7 @@ MiMo-V2-Pro ranks top-5 globally on OpenRouter Arena. 1M context, MoE architectu
   "env": {
     "ANTHROPIC_BASE_URL": "https://api.xiaomimimo.com",
     "ANTHROPIC_AUTH_TOKEN": "YOUR_MIMO_API_KEY",
-    "ANTHROPIC_MODEL": "mimo-v2-pro",
-    "ANTHROPIC_SMALL_FAST_MODEL": "mimo-v2-flash"
+    "ANTHROPIC_MODEL": "mimo-v2-pro"
   }
 }
 ```
@@ -191,7 +185,7 @@ MiMo-V2-Pro ranks top-5 globally on OpenRouter Arena. 1M context, MoE architectu
 
 ---
 
-### StepFun (Step / 阶跃星辰)
+### StepFun
 
 Step-3.5-Flash is a powerful reasoning model at the lowest price point among major providers.
 
