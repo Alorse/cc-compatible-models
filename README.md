@@ -11,7 +11,7 @@ A comprehensive reference guide for developers using **Claude Code** with offici
 | **DeepSeek** | Direct | DeepSeek V3.2, DeepSeek-R2 | — |
 | **MiniMax** | Direct | MiniMax-M2.7, M2.7-Highspeed | Token Plan (from $10/mo) |
 | **Moonshot (Kimi)** | Direct | Kimi K2.5, K2.6 (beta) | — |
-| **Zhipu (Z.ai)** | Direct | GLM-5.1, GLM-5, GLM-4.7 | Coding Plan (from $10/mo) |
+| **Zhipu (Z.ai)** | Direct | GLM-5.1, GLM-5, GLM-4.7 | Coding Plan (from $18/mo) |
 | **Xiaomi (MiMo)** | Direct | MiMo-V2-Pro, V2-Omni, V2-Flash | Token Plan (from ~$6/mo) |
 | **StepFun** | Direct | Step-3.5-Flash, Step-3 | Step Plan (from $6.99/mo) |
 | **SiliconFlow** | Gateway | Hosted DeepSeek, GLM, Qwen, Kimi | — |
@@ -283,39 +283,109 @@ export ANTHROPIC_DEFAULT_SONNET_MODEL="anthropic/claude-sonnet-4.6"
 
 ---
 
-## Special Coding Plans & Subscriptions
+## Coding Plans & Subscriptions
 
-| Provider | Plan | Price | Allowance | Key Features |
-| :--- | :--- | :--- | :--- | :--- |
-| **MiniMax** | Token Plan Starter | $10/mo | 1,500 req / 5hrs | All M2.7 models |
-| **MiniMax** | Token Plan Plus | $20/mo | 4,500 req / 5hrs | + Highspeed access |
-| **MiniMax** | Token Plan Max | $50/mo | 15,000 req / 5hrs | + Speech 2.8 |
-| **MiniMax** | Token Plan Max-Highspeed | $80/mo | 15,000 req / 5hrs | Fastest generation |
-| **MiniMax** | Token Plan Ultra-Highspeed | $150/mo | 30,000 req / 5hrs | Maximum throughput |
-| **Zhipu GLM** | Coding Plan Lite | $10/mo | Usage-based | GLM-5.1 (3x peak / 2x off-peak quota) |
-| **Zhipu GLM** | Coding Plan Pro | $30/mo | Usage-based | + Vision & Web Search |
-| **Zhipu GLM** | Coding Plan Max | $80/mo | Usage-based | Maximum quota |
-| **Xiaomi MiMo** | Token Plan Lite | ~$6/mo | 60M credits | All MiMo models |
-| **Xiaomi MiMo** | Token Plan Standard | ~$16/mo | 200M credits | ~400 complex tasks |
-| **Xiaomi MiMo** | Token Plan Pro | ~$50/mo | 700M credits | + Priority beta access |
-| **Xiaomi MiMo** | Token Plan Max | ~$100/mo | 1.6B credits | ~3,200 complex tasks |
-| **StepFun** | Flash Mini | $6.99/mo | 100 prompts / 5hrs | ~1,500 model calls |
-| **StepFun** | Flash Plus | $9.99/mo | 400 prompts / 5hrs | ~6,000 model calls |
-| **StepFun** | Flash Pro | $29/mo | 1,500 prompts / 5hrs | ~22,500 model calls |
-| **StepFun** | Flash Max | $99/mo | 5,000 prompts / 5hrs | ~75,000 model calls |
+Several providers offer subscription plans with flat-rate usage for Claude Code, typically measured in requests within a 5-hour rolling window.
 
-### MiMo Token Plan Credit Multipliers
-- MiMo-V2-Omni (≤256K): **1x** (1 token = 1 credit)
-- MiMo-V2-Pro (≤256K): **2x**
-- MiMo-V2-Pro (256K-1M): **4x**
+### StepFun — Step Plan
 
-### StepFun Rate Limits (Pay-as-you-go)
-| Tier | Top-up | Concurrency | RPM | TPM |
-| :--- | :--- | :--- | :--- | :--- |
-| V0 | $0 | 5 | 10 | 5M |
-| V1 | $15 | 100 | 1,000 | 20M |
-| V2 | $70 | 200 | 5,000 | 30M |
-| V3 | $300 | 400 | 10,000 | 40M |
+| Plan | Price | Prompts / 5 hrs | Est. Model Calls |
+| :--- | :--- | :--- | :--- |
+| Flash Mini | $6.99/mo | 100 | ~1,500 |
+| Flash Plus | $9.99/mo | 400 | ~6,000 |
+| Flash Pro | $29/mo | 1,500 | ~22,500 |
+| Flash Max | $99/mo | 5,000 | ~75,000 |
+
+All plans include step-3.5-flash, multi-device login, and concurrent agent execution. Plus and above get priority API access and support.
+
+[Step Plan pricing &rarr;](https://platform.stepfun.ai/step-plan)
+
+---
+
+### Xiaomi MiMo — Token Plan
+
+| Plan | Price | Credits | Est. Complex Tasks |
+| :--- | :--- | :--- | :--- |
+| Lite | ~$6/mo (39 RMB) | 60M | ~120 |
+| Standard | ~$16/mo (99 RMB) | 200M | ~400 |
+| Pro | ~$50/mo (329 RMB) | 700M | ~1,400 |
+| Max | ~$100/mo (659 RMB) | 1.6B | ~3,200 |
+
+Credit multipliers: MiMo-V2-Omni **1x**, MiMo-V2-Pro (≤256K) **2x**, MiMo-V2-Pro (256K-1M) **4x**. First purchase gets 12% off. No 5-hour limit.
+
+[Token Plan pricing &rarr;](https://platform.xiaomimimo.com/#/token-plan)
+
+---
+
+### MiniMax — Token Plan
+
+| Plan | Price | Requests / 5 hrs |
+| :--- | :--- | :--- |
+| Starter | $10/mo | 1,500 |
+| Plus | $20/mo | 4,500 |
+| Max | $50/mo | 15,000 |
+| Max-Highspeed | $80/mo | 15,000 |
+| Ultra-Highspeed | $150/mo | 30,000 |
+
+All tiers include MiniMax-M2.7. Highspeed plans use the faster M2.7-Highspeed variant. Yearly plans available: Starter $100/yr, Plus $200/yr, Max $500/yr.
+
+[Token Plan pricing &rarr;](https://platform.minimax.io/subscribe/token-plan)
+
+---
+
+### Zhipu (Z.ai) — Coding Plan
+
+| Plan | Price | Quota |
+| :--- | :--- | :--- |
+| Lite | $18/mo | 3x Claude Pro usage |
+| Pro | $72/mo | 5x Lite Plan usage |
+| Max | $160/mo | 4x Pro Plan usage |
+
+GLM-5.1 consumes **3x** quota during peak hours, **2x** off-peak. Pro and above include Vision and Web Search.
+
+[Coding Plan pricing &rarr;](https://z.ai/subscribe)
+
+---
+
+### Alibaba Cloud — Model Studio Coding Plan
+
+| Plan | Price | Quota | Status |
+| :--- | :--- | :--- | :--- |
+| Lite | ~$10/mo | Lower quotas | **Discontinued for new purchases** (Mar 2026) |
+| Pro | $50/mo | 6,000 req/5hrs, 90K req/mo | Available |
+
+Pro plan includes Qwen 3.5-Plus, Kimi K2.5, GLM-5, MiniMax-M2.5, and Qwen 3-Coder variants. Each query costs 5-30+ requests depending on complexity.
+
+[Coding Plan pricing &rarr;](https://www.alibabacloud.com/en/campaign/ai-scene-coding)
+
+---
+
+### Moonshot (Kimi) — Kimi Code
+
+| Plan | Price | Quota |
+| :--- | :--- | :--- |
+| Free | $0 | Basic chat, daily/weekly quotas |
+| Moderato | ~$19/mo | 2,048 Kimi Code requests/week |
+| Allegretto | ~$49/mo | Higher quotas |
+| Vivace | ~$129/mo | Highest quotas, premium features |
+
+Plans include CLI and developer tools, priority compute, and 5-hour rolling token quotas.
+
+[Kimi Code &rarr;](https://www.kimi.com/code)
+
+---
+
+### Ollama — Cloud Plans
+
+| Plan | Price | Cloud Usage | Concurrent Cloud Models |
+| :--- | :--- | :--- | :--- |
+| Free | $0 | Light | 1 |
+| Pro | $20/mo ($200/yr) | 50x Free | 3 |
+| Max | $100/mo | 5x Pro | 10 |
+
+Local model execution is always unlimited and free on all plans. Cloud usage resets every 5 hours (session) and weekly.
+
+[Ollama Cloud pricing &rarr;](https://ollama.com/pricing)
 
 ---
 
