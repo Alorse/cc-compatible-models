@@ -284,9 +284,9 @@ export ANTHROPIC_DEFAULT_SONNET_MODEL="anthropic/claude-sonnet-4.6"
 
 ---
 
-### Standard Compute (Monthly API Budget)
+### Standard Compute (Coding-Agent Subscription)
 
-A subscription API with a native Anthropic-compatible Messages endpoint. No additional local proxy is needed.
+For developers looking to get more coding work from their AI spend. Standard Compute combines automatic provider selection and smart model routing to stretch compute, with a native Anthropic-compatible Messages endpoint and no additional local proxy.
 
 **Configuration:** use your Standard Compute key, not an Anthropic subscription token.
 
@@ -300,7 +300,7 @@ A subscription API with a native Anthropic-compatible Messages endpoint. No addi
 }
 ```
 
-Keep credentials in a gitignored local settings file or your environment. Do not append `/v1` to the Claude Code base URL. The service's model selection is configured in its dashboard; the response's model name is not independent proof of the underlying backend.
+Keep credentials in a gitignored local settings file or your environment. Do not append `/v1` to the Claude Code base URL. Configure the service's model selection in its dashboard.
 
 **Verified September 5, 2026:** a real `curl` request to `/v1/messages` returned HTTP 200, and Claude Code 2.1.175 returned `connected` using this configuration. The CLI check disabled tools; it does not establish full agent-feature compatibility or model-quality equivalence.
 
