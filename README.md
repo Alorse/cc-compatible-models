@@ -16,7 +16,7 @@ A comprehensive reference guide for developers using **Claude Code** with offici
 | **StepFun** | Direct | Step-3.5-Flash, Step-3 | Step Plan (from $6.99/mo) |
 | **SiliconFlow** | Gateway | Hosted DeepSeek, GLM, Qwen, Kimi | — |
 | **OpenRouter** | Gateway | 200+ models from all providers | — |
-| **[Standard Compute](https://standardcompute.com/integrations/claude-code)** | Gateway | Configurable model pool; tested Messages ID `claude-sonnet-5` | From $19/mo, finite compute budget |
+| **[Standard Compute](https://standardcompute.com/integrations/claude-code)** | Gateway | Smart routing (`standardcompute`) or any catalog model ID | From $19/mo, finite compute budget |
 | **Ollama** | Local / Cloud | Open-source models, free | Free (local) |
 
 ---
@@ -292,17 +292,20 @@ For developers looking to get more coding work from their AI spend. Standard Com
 
 ```json
 {
-  "model": "claude-sonnet-5",
+  "model": "standardcompute",
   "env": {
     "ANTHROPIC_BASE_URL": "https://api.stdcmpt.com",
-    "ANTHROPIC_API_KEY": "YOUR_STANDARD_COMPUTE_KEY"
+    "ANTHROPIC_API_KEY": "YOUR_STANDARD_COMPUTE_KEY",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "standardcompute",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "standardcompute",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "standardcompute"
   }
 }
 ```
 
-Keep credentials in a gitignored local settings file or your environment. Do not append `/v1` to the Claude Code base URL. Configure the service's model selection in its dashboard.
+Keep credentials in a gitignored local settings file or your environment. Do not append `/v1` to the Claude Code base URL. `standardcompute` lets the router pick a model per request. To pin one model instead, use a catalog ID from `https://api.stdcmpt.com/v1/models` (for example `anthropic/claude-sonnet-5.5`) in `model` and all three slots. Leave no slot empty: Claude Code's own IDs such as `claude-sonnet-5-5` are not accepted, so subagents and background calls would fail.
 
-**Verified September 5, 2026:** a real `curl` request to `/v1/messages` returned HTTP 200, and Claude Code 2.1.175 returned `connected` using this configuration. The CLI check disabled tools; it does not establish full agent-feature compatibility or model-quality equivalence.
+**Verified September 5, 2026** with the pinned model `claude-sonnet-5`: a real `curl` request to `/v1/messages` returned HTTP 200, and Claude Code 2.1.175 returned `connected`. Model slots updated October 20, 2026 to match the official setup. The CLI check disabled tools; it does not establish full agent-feature compatibility or model-quality equivalence.
 
 [Official setup](https://standardcompute.com/integrations/claude-code) · [Models](https://standardcompute.com/models) · [Limits](https://standardcompute.com/fair-use)
 
