@@ -16,6 +16,7 @@ A comprehensive reference guide for developers using **Claude Code** with offici
 | **StepFun** | Direct | Step-3.5-Flash, Step-3 | Step Plan (from $6.99/mo) |
 | **SiliconFlow** | Gateway | Hosted DeepSeek, GLM, Qwen, Kimi | — |
 | **OpenRouter** | Gateway | 200+ models from all providers | — |
+| **RouterPlex** | Gateway | DeepSeek V4, Kimi K3, GLM-5.3, Qwen 3.8, MiniMax-M3 and Claude, GPT, Gemini (64 models) | — (prepaid, per token) |
 | **Ollama** | Local / Cloud | Open-source models, free | Free (local) |
 
 ---
@@ -280,6 +281,45 @@ export ANTHROPIC_AUTH_TOKEN="YOUR_OPENROUTER_KEY"
 export ANTHROPIC_DEFAULT_OPUS_MODEL="anthropic/claude-opus-4.7"
 export ANTHROPIC_DEFAULT_SONNET_MODEL="anthropic/claude-sonnet-4.6"
 ```
+
+---
+
+### RouterPlex (Multi-Provider)
+
+Hosted OpenAI- and Anthropic-compatible gateway with Claude, GPT, Gemini, DeepSeek, Kimi, GLM, Qwen, MiniMax and more behind one key. Prepaid balance, billed per token at vendor list prices (0% markup, $0 top-up fee). Balance stops at $0 and each key can carry a hard USD budget. Full guide: [docs.routerplex.com/claude-code](https://docs.routerplex.com/claude-code).
+
+**Configuration** (`~/.claude/settings.json`):
+```json
+{
+  "env": {
+    "ANTHROPIC_BASE_URL": "https://api.routerplex.com",
+    "ANTHROPIC_AUTH_TOKEN": "YOUR_ROUTERPLEX_KEY",
+    "ANTHROPIC_API_KEY": "",
+    "ANTHROPIC_MODEL": "deepseek-v4-pro",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "deepseek-v4-pro",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "deepseek-v4-pro",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "deepseek-v4-pro",
+    "CLAUDE_CODE_MAX_CONTEXT_TOKENS": "616000"
+  }
+}
+```
+
+The base URL has no `/v1`; Claude Code adds `/v1/messages`. Set all four model variables to the same ID to use one non-Claude model. For IDs that do not start with `claude-`, set `CLAUDE_CODE_MAX_CONTEXT_TOKENS` to the model's context window minus its max output (otherwise Claude Code assumes 200K and compacts early). One-command setup: `npx routerplex`.
+
+**Model IDs (USD per 1M tokens, input / output; source: [routerplex.com/api/models](https://routerplex.com/api/models)):**
+
+| Family | Model ID | Price | `CLAUDE_CODE_MAX_CONTEXT_TOKENS` |
+| :--- | :--- | :--- | :--- |
+| DeepSeek | `deepseek-v4-pro` | $0.435 / $0.87 | 616000 |
+| DeepSeek | `deepseek-v4-flash` | $0.09 / $0.18 | 616000 |
+| Kimi | `kimi-k3` | $3 / $15 | 917504 |
+| GLM | `glm-5.3` | $1.40 / $4.40 | 868928 |
+| GLM | `glm-5.3-flash` | $0.15 / $0.50 | 868928 |
+| Qwen | `qwen3.8-max` | $2 / $6 | 868928 |
+| Qwen | `qwen3.7-plus` | $0.32 / $1.28 | 936000 |
+| MiniMax | `MiniMax-M3` | $0.30 / $1.20 | 488000 |
+
+*Note: Tool support varies by model; run a short tool round trip before real work. Top-ups start at $5 (card) or $15 (crypto). Prices change; check the live catalog.*
 
 ---
 
