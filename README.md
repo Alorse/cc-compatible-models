@@ -16,6 +16,7 @@ A comprehensive reference guide for developers using **Claude Code** with offici
 | **StepFun** | Direct | Step-3.5-Flash, Step-3 | Step Plan (from $6.99/mo) |
 | **SiliconFlow** | Gateway | Hosted DeepSeek, GLM, Qwen, Kimi | — |
 | **OpenRouter** | Gateway | 200+ models from all providers | — |
+| **Model.sale** | Gateway (prepaid) | Claude Opus 5.5, Sonnet 5.5, Haiku 5.5; also GPT-6, Gemini, Grok | — |
 | **Ollama** | Local / Cloud | Open-source models, free | Free (local) |
 
 ---
@@ -280,6 +281,31 @@ export ANTHROPIC_AUTH_TOKEN="YOUR_OPENROUTER_KEY"
 export ANTHROPIC_DEFAULT_OPUS_MODEL="anthropic/claude-opus-4.7"
 export ANTHROPIC_DEFAULT_SONNET_MODEL="anthropic/claude-sonnet-4.6"
 ```
+
+---
+
+### Model.sale (Prepaid Gateway)
+
+Prepaid gateway with an Anthropic-compatible `/v1/messages` endpoint, so Claude Code works with only the base URL and key changed. It resells upstream capacity and is not affiliated with Anthropic. Minimum top-up $5 (crypto, card packs or Telegram Stars), no subscription.
+
+**Configuration** (`~/.claude/settings.json`):
+```json
+{
+  "env": {
+    "ANTHROPIC_BASE_URL": "https://api.model.sale",
+    "ANTHROPIC_AUTH_TOKEN": "YOUR_MODEL_SALE_KEY",
+    "ANTHROPIC_MODEL": "claude-opus-5-5"
+  }
+}
+```
+
+| Model | Price per 1M charged tokens |
+|-------|-----------------------------|
+| `claude-opus-5-5` | $1.40 |
+| `claude-sonnet-5-5` | $0.90 |
+| `claude-haiku-5-5` | $0.04 |
+
+*Charged tokens = input + output + 40% of cached input; no separate cache-write fee. Live prices: [model.sale/pricing](https://model.sale/pricing).*
 
 ---
 
